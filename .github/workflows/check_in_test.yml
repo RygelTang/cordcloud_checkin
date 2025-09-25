@@ -31,4 +31,9 @@ jobs:
       - name: run task
         run:
           uv run python main.py
+        env:
+          CC_USERNAME: ${{ secrets.CC_USERNAME }}
+          CC_PASSWORD: ${{ secrets.CC_PASSWORD }}
+          CC_API_URLS: ${{ secrets.CC_API_URLS }}
+    
     
