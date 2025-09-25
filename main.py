@@ -101,8 +101,17 @@ async def do_check_in(url):
       raise
 
 async def main():
+  # 打印配置信息用于调试
+  logger.info(f"用户名: {config.USERNAME}")
+  logger.info(f"API URLs: {config.API_URLS}")
+  
   results = check_url_connection(config.API_URLS)
   best_result = pick_one_best(results)
+  
+  if best_result is None:
+    logger.error("没有可用的URL")
+    return
+  
   finished = False
   while not finished:
     try:
