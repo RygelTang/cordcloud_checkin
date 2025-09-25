@@ -11,7 +11,7 @@ jobs:
       - name: Check Date
         run: date
       - name: Check out cordcloud_api branch
-        uses: actions/checkout@4
+        uses: actions/checkout@v4
         with:
           ref: cordcloud_api
       - name: astral-sh/setup-uv
@@ -34,3 +34,4 @@ jobs:
           uv run python main.py
 
     
+
