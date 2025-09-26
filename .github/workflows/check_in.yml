@@ -1,7 +1,4 @@
 name: courd_cloud_api_checkin
-on:
-  schedule:
-    - cron: '0 0 * * *'
 jobs:
   auto_checkin:
     runs-on: ubuntu-latest
